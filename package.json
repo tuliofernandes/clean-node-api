@@ -7,7 +7,7 @@
     "prepare": "husky install",
     "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
     "test:verbose": "jest --passWithNoTests --runInBand",
-    "test:unit": "npm test -- --watch jest-unit-config.js",
+    "test:unit": "npm test -- --watch -c jest-unit-config.js",
     "test:integration": "npm test -- --watch jest-integration-config.js",
     "lint-staged": "lint-staged",
     "test:staged": "npm test -- --findRelatedTests",
