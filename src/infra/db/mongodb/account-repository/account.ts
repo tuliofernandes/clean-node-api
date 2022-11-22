@@ -11,7 +11,6 @@ export class AccountMongoRepository implements AddAccountRepository {
       .then(async doc => {
         const account: any = await accountCollection.findOne({ _id: doc.insertedId })
         finalObj = MongoHelper.normalizeDocument(account)
-        console.log('finalObj: ', finalObj)
       })
     return finalObj
   }
