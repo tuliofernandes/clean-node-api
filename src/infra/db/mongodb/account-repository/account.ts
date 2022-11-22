@@ -10,8 +10,8 @@ export class AccountMongoRepository implements AddAccountRepository {
     await accountCollection.insertOne(accountData)
       .then(async doc => {
         const account: any = await accountCollection.findOne({ _id: doc.insertedId })
-        const { _id, ...accountWithoutId } = account
-        finalObj = { ...accountWithoutId, id: _id.toHexString() }
+        finalObj = MongoHelper.normalizeDocument(account)
+        console.log('finalObj: ', finalObj)
       })
     return finalObj
   }
