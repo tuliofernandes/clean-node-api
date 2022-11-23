@@ -4,7 +4,7 @@ import { AccountMongoRepository } from './account'
 describe('Account Mongo Repository', () => {
   beforeAll(async () => {
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    await MongoHelper.connect(process.env.MONGO_TEST_URI!)
+    await MongoHelper.connect(process.env.MONGO_URL!)
   })
 
   afterAll(async () => {

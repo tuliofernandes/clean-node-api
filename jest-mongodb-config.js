@@ -7,5 +7,5 @@ module.exports = {
     autoStart: false,
     instance: {}
   },
-  mongoURLEnvName: 'MONGO_TEST_URI'
+  mongoURLEnvName: 'MONGO_URL'
 }
